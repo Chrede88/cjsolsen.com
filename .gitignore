@@ -1,6 +1,10 @@
+# Mac files
+.DS_Store
+
 # IDEs
 .idea/
 
 # Hugo
 resources/
 public/
+realconfig/
