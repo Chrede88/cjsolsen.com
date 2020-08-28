@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Christian Olsen
 
 # Username (this should match the folder name)
 authors:
@@ -10,32 +10,35 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: PhD Student
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
+- name: Quantum Matter Institute, University of British Columbia
+  url: "https://qmi.ubc.ca"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio:
 
 interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+- Quantum Transport
+- Quantum Computing
+- Programming
+- Death/Black Metal
+- Hiking
+- Road Biking
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
+  - course: MSc in Condensed Matter Physics
+    institution: The Niels Bohr Institute, University of Copenhagen
+    year: 2015
+  - course: BSc in Physics
+    institution: The Niels Bohr Institute, University of Copenhagen
+    year: 2013
+  - course: Electrician
+    institution: J&E Electric A/S
     year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -44,16 +47,19 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
+  link: 'mailto:christian@cjsolsen.com'  # For a direct email link, use "mailto:test@example.org".
+
 - icon: google-scholar
   icon_pack: ai
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
+  link: https://scholar.google.ca/citations?hl=en&user=aANZ2F8AAAAJ
+
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/Chrede88
+
+- icon: instagram
+  icon_pack: fab
+  link: https://www.instagram.com/christianjsolsen/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
@@ -65,11 +71,11 @@ email: ""
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
-user_groups:
-- Researchers
-- Visitors
+user_groups: []
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+I'm a dane, currently living in Vancouver, British Columbia. Here I'm pursuing a PhD in experimental condensed matter physics at the University of British Columbia, working at the [Quantum Devices Group](https://www.phas.ubc.ca/~qdev/?p=home). I'm currently focusing on two topics: Topological qubits in proximitized 1D InAs nanostructures and emerging anomalous metallic phases in InAs/Al SIT samples.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I received my Masters degree in 2015 from University of Copenhagen, where I worked at the [Center for Quantum Devices](https://qdev.nbi.ku.dk). During my Masters I studied the properties of Fractional Quantum Hall quasi-particles, using QPC's.
+
+Before entering the exciting world of academia, I trained to become an electrician. I received my certificate in 2009 and was at the same time awarded the bronze medal as well as the Massmannske medal of silver.

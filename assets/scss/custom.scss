@@ -1,0 +1,38 @@
+
+
+.hero-overlay {
+  padding: 10em 0;
+  clear: both;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: intro 0.3s both;
+  animation-delay: 0s;
+  animation-delay: 0.25s;
+}
+
+footer {
+  margin: 1rem 0 0;
+  padding: 0rem 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 0.75rem;
+  text-align: center;
+  color: rgba(255,255,255,0.54);
+}
+
+body.dark,
+.dark .docs-toc-link,
+.dark .docs-sidebar .nav > li:not(.active) > a,
+.dark .modal button.close,
+.dark input,
+.dark .form-control,
+.dark .form-control:focus {
+  color: rgb(248, 248, 242);
+  background: rgb(31, 31, 31);
+}
+.dark .navbar {
+  background: rgb(31, 31, 31);
+}
