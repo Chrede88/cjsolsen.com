@@ -31,7 +31,9 @@ projects = []
   focal_point = "Center"
 +++
 
-I did this hike with two good friends in early October. The weather report promised sun and blue skies, so we were confident that it would be an amazing couple of days! Before I dive into our experience, let me list some stats:
+I did this hike with two good friends in early October. The weather report promised sun and blue skies, so we were confident that it would be an amazing couple of days! Before I dive into our experience, let me list some stats.
+
+**Trail stats**
 
 - It's a 29km one-way hike, starting from the Cypress parking lot (N 49°23'47", W 123°12'16") to Porteau Cove.
 - Aim for 2-3 days. It's possible to do in 2 days, but that makes for a very tough first day!
