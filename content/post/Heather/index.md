@@ -31,7 +31,7 @@ projects = []
   focal_point = "Center"
 +++
 
-I did this hike in the beginning of September, over the Labour Day long weekend. The weather report promised fantastic weather, so we were all very excited to go:smiley:
+I did this hike in the beginning of September, over the Labour Day long weekend. The weather report promised fantastic weather, so we were all very excited to go:smiley:<!--more-->
 
 **Trail stats**
 
@@ -42,7 +42,7 @@ E. C. Manning Park has many wonderful trails all traversing through alpine meado
 
 The drive from Vancouver is roughly 2.5h, so we planed on heading out quite early. Luckily for us there were no accidents on the highway that morning, so the drive was quite uneventful. It was very cloudy all the way past Hope, but once we got on highway 3 the sun broke through and it got quite warm. Thanks to the air conditioned car, we all stayed quite cool:snowflake::automobile:
 
-We began the hike out to the campsite just before 1PM. The very first part of the hike follows along a little loop trail that during covid was oneway only. After 500m we came to a pretty steep staircase, which marked the beginning of the decent to the first campsite (Buckhorn) at 4km. The elevation loss is a little more than 200m. Which we had to gain again starting right after we left the small campsite, after a short lunch break.
+We began the hike out to the campsite just before 1PM. The very first part of the hike follows along a little loop trail that during covid was oneway only. After 500m we came to a pretty steep staircase, which marked the beginning of the descent to the first campsite (Buckhorn) at 4km. The elevation loss is a little more than 200m. Which we had to gain again starting right after we left the small campsite, after a short lunch break.
 
 {{< figure src="elevation_profile.jpg" title="The elevation profile of the hike to the campsite." >}}
 
@@ -55,5 +55,5 @@ The summit of the First Brother mountain is the destination for most of the day 
 
 {{< figure src="summit.jpg" title="View from the summit of the First Brother Mt. The red arrow marks the parking lot." >}}
 
-We past quite a lot of people hiking towards the campground we had left a few hours earlier. It looked like it would be yet another busy evening.
+We passed quite a lot of people hiking towards the campground we had left a few hours earlier. It looked like it would be yet another busy evening.
 We changed into some dry clothes and flip flops, after climbing the hill back up to the parking lot. We ended our hike with a cold beer and a bit of food. All-in-all a great weekend:smile:
