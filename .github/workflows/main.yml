@@ -29,5 +29,5 @@ jobs:
     - name: Deploy to S3
       run: hugo deploy --force --maxDeletes -1 --invalidateCDN
       env:
-        AWS_ACCESS_KEY_ID: $${{ secrets.AWS_KEY }}
-        AWS_SECRET_ACCESS_KEY: $${{ secrets.AWS_PASS }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_PASS }}
