@@ -9,25 +9,25 @@ on:
     branches: [ master ]
 
 jobs:
-Build_and_Deploy:
-  runs-on: ubuntu-latest
-  steps:
-  # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-  - uses: actions/checkout@v2
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
 
-  # Sets up Hugo
-  - name: Setup Hugo
-    uses: peaceiris/actions-hugo@v2
-    with:
-      hugo-version: '0.74.3'
+    # Sets up Hugo
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.74.3'
 
-  # Builds cjsolsen.com repo
-  - name: Build Hugo
-    run: hugo --minify
+    # Builds cjsolsen.com repo
+    - name: Build Hugo
+      run: hugo --minify
   
-  # Deploys built website to S3
-  - name: Deploy to S3
-    run: hugo deploy --force --maxDeletes -1 --invalidateCDN
-    env:
-      AWS_ACCESS_KEY_ID: $AWS_KEY
-      AWS_SECRET_ACCESS_KEY: $AWS_PASS
+    # Deploys built website to S3
+    - name: Deploy to S3
+      run: hugo deploy --force --maxDeletes -1 --invalidateCDN
+      env:
+        AWS_ACCESS_KEY_ID: $AWS_KEY
+        AWS_SECRET_ACCESS_KEY: $AWS_PASS
