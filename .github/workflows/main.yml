@@ -10,16 +10,19 @@ on:
 
 jobs:
   Build_and_Deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        submodules: true  # Fetch Hugo themes (true OR recursive)
+        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
     # Sets up Hugo
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.74.3'
+        hugo-version: 'lastest'
 
     # Builds cjsolsen.com repo
     - name: Build Hugo
