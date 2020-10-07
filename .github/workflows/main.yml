@@ -28,6 +28,8 @@ jobs:
     # Builds cjsolsen.com repo
     - name: Build Hugo
       run: hugo --minify
+      env:
+        GMAPS: ${{ secrets.GMAPS }}
   
     # Deploys built website to S3
     - name: Deploy to S3
