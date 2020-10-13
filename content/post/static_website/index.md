@@ -1,7 +1,7 @@
 +++
-title = "Creating and deploying a statically typed website"
+title = "Creating and deploying a static website"
 subtitle = "Using Hugo and Amazon Web Services (AWS) or Github"
-date = 2020-09-25T10:00:00-08:00
+date = 2020-10-08T15:00:00-08:00
 draft = false
 
 # List authors (if not me!)
@@ -92,7 +92,7 @@ Hugo Static Site Generator v0.74.3/extended
 
 ## <a name="theme"></a> Choosing a theme
 Most good themes have nicely complied documentation, which should get you started.
-If you want to use the [Academic](https://themes.gohugo.io/academic/) theme, as is used for this website run the following command in Terminal or Powershell at the location you want to store your website files.
+If you want to use the [Academic](https://themes.gohugo.io/academic/) theme, as is used for this website, run the following command in Terminal or Powershell at the location you want to store your website files.
 ```
 git clone https://github.com/wowchemy/starter-academic.git
 ```
@@ -138,6 +138,11 @@ Once you add more stuff to the website, the HTTP server will pick up the changes
 
 Apart from the config file(s), the important folders are `content`, `static` and `theme`. The `content` folder will hold blog posts and other larger content. The `static` folder is where images used on the main page will be stored. The `theme` folder is pretty self explanatory, it holds all the files necessary for the chosen theme. Take a look at [this link](https://gohugo.io/getting-started/directory-structure/) for more info on the folder structure used by Hugo.
 
+## <a name="module"></a> Hugo modules
+Modules are supported as of Hugo v0.56.0. Modules are like packages in Python or modules in Go (which Hugo modules are build upon). You can use modules to import certain blocks of code that can help you build your website or even whole themes can be imported as modules. If you have chosen to work with the Academic theme I linked to under [Choosing a theme](#theme), you will notice that the theme folder is missing! This is because it is imported as a module on compile. If you look in the main config file (./config/_default/config.toml) you will see a `[module]` section at the very bottom. This instructs Hugo to import the theme. If you are not using Netlify (this tutorial does not rely on Netlify) you can out comment the second `[[module.imports]]`.
+
+Whenever you build your website Hugo will download the version specified in the file called `go.mod`, or load it from cache. This ensures that you will always get the same version of the theme unless you update the version pointer in the file. This also makes it extremely easy to update the theme to a newer version.
+
 ## <a name="build"></a> Building the website
 Once you are ready to compile the HTML files that will make up your website, navigate to the top level of your local website folder tree and execute the following:
 ```
@@ -146,7 +151,7 @@ hugo
 This will build the files needed in a new folder called `public`. Every time you build your website the files in `public` will be updated and it is these files you need to upload to where ever your website is hosted.
 
 # <a name="git"></a> git interlude
-At this point you should consider creating a remote repository for your website. I use [Github](https://www.github.com), it's a great platform and you can actually host your website on Github completely free. Publishing your files may also help others making their own website, open source man!:smiley:
+At this point you should consider creating a remote repository for your website. I use [Github](https://www.github.com), it's a great platform and you can actually host your website on Github completely free. Publishing your files may also help others in making their own website. Open source people!:smiley:
 
 If you are unsure about how to use git, take a look at [this presentation](https://chrede88.github.io/git-presentation/) I have put together. The presentation goes through all steps from installing git to collaborating with others. Please note that the presentation layout is two dimensional, look for arrows in the bottom right corner or press `esc` to get an overview.
 
@@ -201,6 +206,51 @@ jobs:
 ```
 
 The first part defines when this workflow should run. Change the name of the branch from `master` to something else if you want to work off another branch. The next section defines what jobs to run when executing the workflow. There is only one job, `Build_and_Deploy`, and there are four steps in this one job. The first step checks out the master branch so the automation can access the files. Next step installs Hugo on the virtual machine running the workflow and the third step builds your website and puts the compiled files into the public folder. The last step creates (if it doesn't exists) a branch called `gh-pages` and places the files from the public folder into this branch.
+
+### <a name="golangGithub"></a> Modules and Go
+The content of the workflow file I posted above needs an addition if your website relies in Hugo modules, like the Academic theme.
+Importing and building Hugo modules requires Go as well as Hugo. The workflow file should contain an extra step:
+```yaml
+# Give the workflow a name
+name: Deploy to gh-pages
+
+# Controls when the action will run. Triggers the workflow on push request
+# events to the master branch.
+on:
+  push:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Build_and_Deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.74.3'
+          extended: true
+
+      - name: Setup Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '1.15' # Import the Go version specified in go.mod
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+```
+Notice the extra step called `Setup Go`. This installs Go on the virtual machine, so it can be used to compile the theme. Without it, the workflow will fail!
 
 ### <a name="setingsgithub"></a> Setting the Github Pages source
 The last step is to inform Github where to look for the source for the website. Under the `Settings` tab, scroll down to the `Github Pages` section and set the source to the newly created branch `gh-pages`. Github will now start building the website and will post a small messages when your website is ready. It usually takes less than 2 min.
@@ -383,7 +433,7 @@ jobs:
         submodules: true  # Fetch Hugo themes (true OR recursive)
         fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-    # Sets up Hugo
+    # Intall Hugo
     - name: Setup Hugo # <-- installing Hugo on virtual machine
       uses: peaceiris/actions-hugo@v2
       with:
@@ -403,6 +453,54 @@ jobs:
 ```
 
 Remember to change the last two lines, so they reflect the names you gave your AWS secrets. Give the workflow some reasonable name and commit it to the master branch.
+
+Just like I explained under [Modules and Go](#golangGithub), you will need an extra step in the workflow file if your website relies on Hugo modules. You need to add extra step that installs Go on the virtual machine. Here is the updated workflow file you will need:
+
+```yaml
+# This is a basic workflow to help you get started with Actions
+
+name: Build site and deploy to S3 bucket
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ] # <-- Change to another branch, it you don't want to work on another branch
+
+jobs:
+  Build_and_Deploy:
+    runs-on: ubuntu-18.04
+    steps:
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+      with:
+        submodules: true  # Fetch Hugo themes (true OR recursive)
+        fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+    # Install Hugo
+    - name: Setup Hugo # <-- installing Hugo on virtual machine
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.74.3'
+        extended: true
+
+    # Install Go
+    - name: Setup Go # <-- installing Go on virtual machine
+      uses: actions/setup-go@v2
+      with:
+        go-version: '1.15' # Import the Go version specified in go.mod
+
+    # Builds cjsolsen.com repo
+    - name: Build Hugo # <-- Biulding website and adding files to ./public
+      run: hugo --minify
+
+    # Deploys built website to S3
+    - name: Deploy to S3 # <-- use build-in deploy function to add files to S3 and create invalidations
+      run: hugo deploy --force --maxDeletes -1 --invalidateCDN
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_KEY }} # <-- Change to the name you gave the AWS key secret
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_PASS }} # <-- Change to the name you gave the AWS passwd secret
+```
 
 Once the commit is done, the workflow should start. You can follow along under the Action tab. The workflow should fail when it reaches the last step! We still haven't told it which S3 bucket or CloudFront distribution we want it to interact with. To do that you need to add some more info to the `config.toml` file. Add this to the end of the file:
 ```
@@ -427,6 +525,6 @@ Once the commit is done, the workflow should start. You can follow along under t
     gzip = true
 
 ```
-The deployment.tergets discribe the name of the deployment and URL should point to your bucket, e.g. `s3://bucketname?region=us-east-1`. If the the CloudFront distribution ID is present Hugo will invalidate your CDN caches as needed. You need to point to your main CDN, the one pointing at the "www" S3 bucket.
+The deployment.targets describe the name of the deployment and the URL should point to your bucket, e.g. `s3://bucketname?region=us-east-1`. If the CloudFront distribution ID is present Hugo will invalidate your CDN caches as needed. You need to point to your main CDN, the one pointing at the "www" S3 bucket.
 
 Congratulations, you now have a website and a fully automated distribution pipeline🎉🎉🎉

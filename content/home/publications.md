@@ -15,7 +15,7 @@ subtitle = ""
   page_type = "publication"
 
   # Choose how much pages you would like to display (0 = all pages)
-  count = 5
+  count = 0
 
   # Choose how many pages you would like to offset by
   offset = 0
@@ -37,7 +37,7 @@ subtitle = ""
   #   2 = Compact
   #   3 = Card
   #   4 = Citation (publication only)
-  view = 2
+  view = 4
 
 [design.background]
   # Apply a background color, gradient, or image.
@@ -66,11 +66,3 @@ subtitle = ""
  # CSS class.
  css_class = ""
 +++
-
-E. Sajadi, T. Palomaki, Z. Fei, W. Zhao, P. Bement, <span style="color:rgb(181,192,201)">**C. Olsen**</span>, S. Luescher, X. Xu, J. Folk, D. Cobden,
-"*Gate-induced superconductivity in a monolayer topological insulator*,"
-[Science 362, 922 (2018)](https://doi.org/10.1126/science.aar4426).
-
-N. Hartman, <span style="color:rgb(181,192,201)">**C. Olsen**</span>, S. Luescher, M. Samani, S. Fallahi, G. Gardner, M. Manfra, J. Folk,
-"*Direct Entropy Measurement in a Mesoscopic Quantum System*,"
-[Nature Physics 14, 1083 (2018)](https://doi.org/10.1038/s41567-018-0250-5).
