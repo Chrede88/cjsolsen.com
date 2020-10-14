@@ -29,8 +29,8 @@ jobs:
     - name: Build Hugo
       run: hugo --minify
       env:
-        HUGO_PARAMS_MAP: '{"engine":"1","api_key":"${{ secrets.GMAPS }}","zoom":"15"}'
-  
+        HUGO_PARAMS_MAP: '{"engine":1,"api_key":"${{ secrets.GMAPS }}","zoom":15}'
+
     # Deploys built website to S3
     - name: Deploy to S3
       run: hugo deploy --force --maxDeletes -1 --invalidateCDN
