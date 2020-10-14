@@ -1,37 +1,37 @@
-
-
-.hero-overlay {
-  padding: 10em 0;
-  clear: both;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: intro 0.3s both;
-  animation-delay: 0s;
-}
-
 footer {
   margin: 1rem 0 0;
   padding: 0rem 0;
   width: 100%;
 }
 
-footer p {
-  font-size: 0.75rem;
-  text-align: center;
-  color: rgba(255,255,255,0.54);
+.navbar {
+  background: $sta-dark-menu-primary;
 }
 
-body.dark,
-.dark .docs-toc-link,
-.dark .docs-sidebar .nav > li:not(.active) > a,
-.dark .modal button.close,
-.dark input,
-.dark .form-control,
-.dark .form-control:focus {
-  color: rgb(248, 248, 242);
-  background: rgb(31, 31, 31);
-}
 .dark .navbar {
-  background: rgb(31, 31, 31);
+  background: $sta-menu-primary;
+  .navbar-nav {
+  .nav-link {
+    &.active {
+      font-weight: bold !important;
+      color: $sta-menu-text-active !important;
+      }
+    }
+  }
+}
+
+a:hover,
+a:focus {
+ color: $sta-dark-link-hover;
+}
+
+.dark a:hover,
+.dark a:focus {
+ color: $sta-link-hover;
+}
+
+.dark pre,
+.dark code {
+  color: $sta-dark-link;
+  background-color: rgb(68, 71, 75);
 }
