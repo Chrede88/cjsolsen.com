@@ -11,13 +11,15 @@ publishDate:
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["2"]
+publication_types: []
 
 # Publication name and optional abbreviated publication name.
 publication: "*Science 362, 922 (2018)*"
 publication_short: ""
 
-abstract: "The layered semimetal tungsten ditelluride (WTe2) has recently been found to be a two-dimensional topological insulator (2D TI) when thinned down to a single monolayer, with conducting helical edge channels. We found that intrinsic superconductivity can be induced in this monolayer 2D TI by mild electrostatic doping at temperatures below 1 kelvin. The 2D TI–superconductor transition can be driven by applying a small gate voltage. This discovery offers possibilities for gate-controlled devices combining superconductivity and nontrivial topological properties, and could provide a basis for quantum information schemes based on topological protection."
+math: true
+
+abstract: "The layered semimetal tungsten ditelluride ($\\mathrm{WTe\\_{2}}$) has recently been found to be a two-dimensional topological insulator (2D TI) when thinned down to a single monolayer, with conducting helical edge channels. We found that intrinsic superconductivity can be induced in this monolayer 2D TI by mild electrostatic doping at temperatures below 1 kelvin. The 2D TI–superconductor transition can be driven by applying a small gate voltage. This discovery offers possibilities for gate-controlled devices combining superconductivity and nontrivial topological properties, and could provide a basis for quantum information schemes based on topological protection."
 
 # Summary. An optional shortened abstract.
 summary: ""

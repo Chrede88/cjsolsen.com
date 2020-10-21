@@ -97,7 +97,7 @@ address = {street = "Briamacombe Bldg, Room 213, 2355 East Mall", city = "Vancou
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "49.262106", longitude = "-123.248055"}
+coordinates = {latitude = "49.261955", longitude = "-123.248489"}
 
 # Directions for visitors to locate you.
 directions = ""
@@ -270,7 +270,7 @@ plugins_js  = []
   #   3: OpenStreetMap (Mapbox)
   engine = 1
   api_key = ""
-  zoom = 15
+  zoom = 17
 
 ############################
 ## Marketing

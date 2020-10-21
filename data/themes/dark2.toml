@@ -15,11 +15,11 @@ menu_text_active = "rgb(121,165,201)"
 menu_title = "#fff"
 
 # Home sections
-home_section_odd = "rgb(31,31,31)"
+home_section_odd = "rgb(32,32,32)"
 home_section_even = "rgb(33,33,33)"
 
 # Background
-background = "rgb(31,31,31)"
+background = "rgb(32,32,32)"
 
 # link
 link = "rgb(100,120,220)"

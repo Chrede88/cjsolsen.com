@@ -13,13 +13,15 @@ publishDate:
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["2"]
+publication_types: []
 
 # Publication name and optional abbreviated publication name.
 publication: "*Nature Physics 14, 1083 (2018)*"
 publication_short: ""
 
-abstract: "The entropy of an electronic system offers important insights into the nature of its quantum mechanical ground state. This is particularly valuable in cases where the state is difficult to identify by conventional experimental probes, such as conductance. Traditionally, entropy measurements are based on bulk properties, such as heat capacity, that are easily observed in macroscopic samples but are unmeasurably small in systems that consist of only a few particles. Here, we develop a mesoscopic circuit to directly measure the entropy of just a few electrons, and demonstrate its efficacy using the well-understood spin statistics of the first, second and third electron ground states in a GaAs quantum dot. The precision of this technique, quantifying the entropy of a single spin-1/2 to within 5% of the expected value of kB ln 2, shows its potential for probing more exotic systems. For example, entangled states or those with non-Abelian statistics could be clearly distinguished by their low-temperature entropy."
+math: true
+
+abstract: "The entropy of an electronic system offers important insights into the nature of its quantum mechanical ground state. This is particularly valuable in cases where the state is difficult to identify by conventional experimental probes, such as conductance. Traditionally, entropy measurements are based on bulk properties, such as heat capacity, that are easily observed in macroscopic samples but are unmeasurably small in systems that consist of only a few particles. Here, we develop a mesoscopic circuit to directly measure the entropy of just a few electrons, and demonstrate its efficacy using the well-understood spin statistics of the first, second and third electron ground states in a GaAs quantum dot. The precision of this technique, quantifying the entropy of a single spin-1/2 to within 5% of the expected value of $\\mathrm{k\\_{B}\\ln2}$, shows its potential for probing more exotic systems. For example, entangled states or those with non-Abelian statistics could be clearly distinguished by their low-temperature entropy."
 
 # Summary. An optional shortened abstract.
 summary: ""

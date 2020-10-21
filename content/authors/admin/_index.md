@@ -60,11 +60,19 @@ social:
 - icon: instagram
   icon_pack: fab
   link: https://www.instagram.com/christianjsolsen/
-# Link to a PDF of your resume/CV from the About widget.
+
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/christian-olsen-a3114a1b8/
+
+- icon: strava
+  icon_pack: fab
+  link: https://www.strava.com/athletes/5166204/
+
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: files/cv.pdf
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
