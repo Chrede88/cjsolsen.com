@@ -57,50 +57,50 @@ Firstly we need to install Hugo and possibly some prerequisites. If you are usin
 
 ### macOS or Linux
 Run the following to install Homebrew (in a Terminal window):
-```
+``` bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 Make sure you have the latest version of Homebrew:
-```
+``` bash
 brew update && brew upgrade
 ```
 We are now ready to install Hugo, Go and git. If you already have git and/or Go installed, then leave them out.
-```
+``` bash
 brew install git golang hugo
 ```
 Hugo relies and Go to build your website files and we need git so we can interact with Github (or another online git repository manager). I will assume you are using [Github](https://github.com) in this tutorial.
 
 ### Windows
 If you are using Windows, you should install [Scoop](https://scoop.sh), using Powershell.
-```
+``` bash
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 iwr -useb get.scoop.sh | iex
 ```
 Now install Hugo and prerequisites, leaving out stuff you already have.
-```
+``` bash
 scoop install git openssh go hugo-extended
 ```
 ### All operating systems
 Test that Hugo is correctly installed:
-```
+``` bash
 hugo version
 ```
 Output should be something like this:
-```
+``` bash
 Hugo Static Site Generator v0.74.3/extended
 ```
 
 ## <a name="theme"></a> Choosing a theme
 Most good themes have nicely complied documentation, which should get you started.
 If you want to use the [Academic](https://themes.gohugo.io/academic/) theme, as is used for this website, run the following command in Terminal or Powershell at the location you want to store your website files.
-```
+``` bash
 git clone https://github.com/wowchemy/starter-academic.git
 ```
 If you don't like Academic, check out the many other nice themes available at [Hugo themes](https://themes.gohugo.io) and clone your favourite theme to your local machine.
 
 ## <a name="edit"></a> Editing your website
 It is now time to add some content to your new website. But first let us take a look at the folder/files structure used by Hugo. Any new site will have more or less the same structure.
-```
+``` text
 . <site name>
 ├── archetypes
 ├── config.toml
@@ -111,7 +111,7 @@ It is now time to add some content to your new website. But first let us take a 
 └── themes
 ```
 The most important file is the `config.toml` (or `.yaml`). Most of the main info about the website is stored here. Alternatively the theme might use a configuration folder containing more than one config file. No need to worry if you don't know `.toml` or `.yaml` syntax! They are both very similar and very simple. I will use `.toml` throughout this tutorial, but `.yaml` will be as simple. Let us take a look at a small (minimal) config file.
-```
+``` toml
 baseURL = "https://yoursite.example.com/"
 title = "My Hugo Site"
 
@@ -129,7 +129,7 @@ A real configuration file will contain much more, but the syntax is easy to unde
 While you are developing the website you can leave the `baseURL` as is, but it needs to reflect the actual `URL` once you are ready to deploy your site. We will get back to that later.
 
 If you want to take a look at your website as you are adding content or changing parameters, you can run a local HTTP server right from a Terminal (or Powershell) window.
-```
+``` bash
 hugo server
 ```
 This will start a local HTTP server running at `http://localhost:1313`. Open a browser and navigate to this address. You will likely see an empty or almost empty website, we haven't added any content just yet:wink:
@@ -145,7 +145,7 @@ Whenever you build your website Hugo will download the version specified in the 
 
 ## <a name="build"></a> Building the website
 Once you are ready to compile the HTML files that will make up your website, navigate to the top level of your local website folder tree and execute the following:
-```
+``` bash
 hugo
 ```
 This will build the files needed in a new folder called `public`. Every time you build your website the files in `public` will be updated and it is these files you need to upload to where ever your website is hosted.
@@ -169,7 +169,7 @@ Github automations can be found under the `Actions` tab, when viewing your repos
 {{< figure src="actions.png" title="Click on `set up a workflow yourself ->` " >}}
 
 Github will populate the new workflow file with some standard input. Notice that Github uses `.yaml` files for their workflows. Key/value pairs are used just like in `.toml` files. The indents (2 spaces) are very important and the workflow will not work if they are messed up. Go ahead and replace the standard input with the following:
-```yaml
+``` yaml
 # Give the workflow a name
 name: Deploy to gh-pages
 
@@ -210,7 +210,7 @@ The first part defines when this workflow should run. Change the name of the bra
 ### <a name="golangGithub"></a> Modules and Go
 The content of the workflow file I posted above needs an addition if your website relies in Hugo modules, like the Academic theme.
 Importing and building Hugo modules requires Go as well as Hugo. The workflow file should contain an extra step:
-```yaml
+``` yaml
 # Give the workflow a name
 name: Deploy to gh-pages
 
@@ -285,7 +285,7 @@ Next setup the bucket as a static website host under `properties`. This gives th
 
 The last step is to setup a bucket policy, which restrict the access to the bucket to read only. Add the following to the bucket policy under `permissons`. Change the `Resource` to the `arn` of your bucket.
 
-```json
+``` json
 {
     "Version": "2008-10-17",
     "Statement": [
@@ -376,7 +376,7 @@ Before setting up the Github Action, we need to make a new user on AWS. AWS let 
 
 Give your users a descriptive name and select "Programmitic access" for the account type. Select "Attach existing policies directly" and click "Create policy". Add the following policy to the `JSON` tab:
 
-```json
+``` json
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -412,7 +412,7 @@ Now we are ready to create the automation action! Under the Action tab, hit "set
 {{< figure src="actions.png" title="Click on `set up a workflow yourself ->` " >}}
 
 Github will populate the action with some default stuff, replace it with the following:
-```yaml
+``` yaml
 # This is a basic workflow to help you get started with Actions
 
 name: Build site and deploy to S3 bucket
@@ -456,7 +456,7 @@ Remember to change the last two lines, so they reflect the names you gave your A
 
 Just like I explained under [Modules and Go](#golangGithub), you will need an extra step in the workflow file if your website relies on Hugo modules. You need to add extra step that installs Go on the virtual machine. Here is the updated workflow file you will need:
 
-```yaml
+``` yaml
 # This is a basic workflow to help you get started with Actions
 
 name: Build site and deploy to S3 bucket
@@ -503,7 +503,7 @@ jobs:
 ```
 
 Once the commit is done, the workflow should start. You can follow along under the Action tab. The workflow should fail when it reaches the last step! We still haven't told it which S3 bucket or CloudFront distribution we want it to interact with. To do that you need to add some more info to the `config.toml` file. Add this to the end of the file:
-```
+``` toml
 # Deployment details
 [deployment]
 

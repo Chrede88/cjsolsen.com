@@ -48,7 +48,7 @@ We began the hike out to the campsite just before 1PM. The very first part of th
 
 We reached the Kicking Horse campground at 5:20PM and managed to find a nice spot to pitch our tents. There were already quite a lot of people at the campsite, so I would not recommend arriving any later than we did. After setting up camp I did a bit of exploring on the trails leaving the campsite, hoping to find a nice spot where we could watch the sunset. Unfortunately it seemed like we had to climb some pretty steep slopes, so I abandoned the idea again. We found a nice little plateau were we had dinner, hot cocoa (with bourbon) and looked at the stars after the sun had set. The moon didn't appear until a few hours later, which meant the sky was full of stars and quite a few satellites.
 
-{{< figure src="dinner.jpeg" title="Overlooking the campsite from our dinner spot." >}}
+{{< figure src="dinner.jpg" title="Overlooking the campsite from our dinner spot." >}}
 
 We got up around 7:30AM the next morning. We weren't in a hurry, so we took our time eating breakfast and repacking our backpacks. We started the return hike just before 10:30AM, planing to stop for lunch at the junction to the short First Brother summit trail.
 The summit of the First Brother mountain is the destination for most of the day hikes, but it wasn't super busy yet. We enjoyed the absolutely fantastic views from the summit for a bit, before returning to the main trail again.

@@ -47,7 +47,7 @@ Our original plan was to get the first ferry out of Horseshoe Bay on the morning
 
 We were dropped off at our starting point just after 1pm. The trail started to climb right away, up towards to summit of Tin Hat Mt. It is pretty steep, but not to bad if you are just going up on a day hike. With 20kg on our backs, it was quite a challenge! We reached the summit 3h after we started and felt lucky that the clouds did not cover the views. After some snacks and a short rest we got going again. Or goal was to reach the campground at Lewis Lake (N 49°57'17", W 124°20'48").
 
-{{< figure src="tinhat.jpeg" title="The view from the summit of Tin Hat Mt." >}}
+{{< figure src="tinhat.jpg" title="The view from the summit of Tin Hat Mt." >}}
 
 Looking at the map it seemed like it should have been fairly easy to reach the campground within a couple of hours, but the trail were constantly detouring due to active or old logging areas. We reached the campsite just before 7pm. We were quite hungry and pretty tired at this point. It had started raining a little bit, so we set up camp as the first thing. We knew it was going to rain a lot later and did not want our gear getting wet on the first day. After a nice dip in the lake and some dinner, we went to bed.
 
@@ -58,7 +58,7 @@ We snoozed a bit and got up a little after 8am. It had rained a lot during the n
 We decided to get an early start as we knew everyone in the cabin was aiming for the same overnight spot as we were. We got up before 7am and hit the trail around 8:30am. We only had 12km to the cabin on Walt Hill and we were determined not to let anyone catch up. If we were lucky we could dry some of the stuff that was still wet before the rest of our company from the day before reached the hut. We got to the hut before noon, but there were already three boys there. They were taking a break and had spend the night. We got most of our wet stuff from the day before, plus our wet gear from the hike up, hung up and had some lunch.
 The rest of the crew from the night before slowly trickled in over the next few hours. We were quite the number in the cabin that night, but everyone was keen on making space for people arriving after them.
 
-{{< figure src="cabin.jpeg" title="There was still some space left for more people after we put out our sleeping gear." >}}
+{{< figure src="cabin.jpg" title="There was still some space left for more people after we put out our sleeping gear." >}}
 
 The weather cleared up during the evening and we got a few glimpses of the valley below us that night. We wanted to catch the ferry out of Saltery Bay at 11:45am, so we got up at 6am the next morning. After a quick breakfast we enjoyed the amazing view from the top of Walt Hill, before starting our decent. We were on the last 11km and it was all down hill or flat back to the car. We stopped to refill our water bottles in a stream a couple of kilometers down the path and then did not stop again before we reached the car. It turned out we had made good time and so we reached the ferry terminal with an hour to spare.
 

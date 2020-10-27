@@ -23,7 +23,7 @@ height = "calc(50vh)"
   # Overlay a color or image (optional).
   #   Deactivate an option by commenting out the line, prefixing it with `#`.
   # overlay_color = "#666"  # An HTML color value.
-  overlay_img = "nanowire.jpg"  # Image path relative to your `static/media/` folder.
+  overlay_img = "nanowire.jp2"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.2  # Darken the image. Value in range 0-1.
 
   [[item]]
@@ -34,7 +34,7 @@ height = "calc(50vh)"
     # Overlay a color or image (optional).
     #   Deactivate an option by commenting out the line, prefixing it with `#`.
     # overlay_color = "#666"  # An HTML color value.
-    overlay_img = "mesa.jpg"  # Image path relative to your `static/media/` folder.
+    overlay_img = "mesa.jp2"  # Image path relative to your `static/media/` folder.
     overlay_filter = 0.2  # Darken the image. Value in range 0-1.
 
     [[item]]
@@ -45,6 +45,6 @@ height = "calc(50vh)"
       # Overlay a color or image (optional).
       #   Deactivate an option by commenting out the line, prefixing it with `#`.
       # overlay_color = "#666"  # An HTML color value.
-      overlay_img = "squares.jpg"  # Image path relative to your `static/media/` folder.
+      overlay_img = "squares.jp2"  # Image path relative to your `static/media/` folder.
       overlay_filter = 0.2  # Darken the image. Value in range 0-1.
 +++
