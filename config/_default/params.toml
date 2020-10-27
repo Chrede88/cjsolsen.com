@@ -57,7 +57,7 @@ description = ""
 # Enable source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
 highlight = true
-highlight_languages = ["toml","yaml","json","javascript","html","bash"]  # Add support for highlighting additional languages
+highlight_languages = ["ini","yaml","json","javascript","bash"]  # Add support for highlighting additional languages
 highlight_style = "dracula"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
 
 # Enable LaTeX math rendering? true/false

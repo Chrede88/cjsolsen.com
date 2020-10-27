@@ -111,7 +111,7 @@ It is now time to add some content to your new website. But first let us take a 
 └── themes
 ```
 The most important file is the `config.toml` (or `.yaml`). Most of the main info about the website is stored here. Alternatively the theme might use a configuration folder containing more than one config file. No need to worry if you don't know `.toml` or `.yaml` syntax! They are both very similar and very simple. I will use `.toml` throughout this tutorial, but `.yaml` will be as simple. Let us take a look at a small (minimal) config file.
-``` toml
+``` ini
 baseURL = "https://yoursite.example.com/"
 title = "My Hugo Site"
 
@@ -503,7 +503,7 @@ jobs:
 ```
 
 Once the commit is done, the workflow should start. You can follow along under the Action tab. The workflow should fail when it reaches the last step! We still haven't told it which S3 bucket or CloudFront distribution we want it to interact with. To do that you need to add some more info to the `config.toml` file. Add this to the end of the file:
-``` toml
+``` ini
 # Deployment details
 [deployment]
 
