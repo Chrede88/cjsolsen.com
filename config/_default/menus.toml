@@ -23,7 +23,8 @@
   url = "#contact"
   weight = 6
 
-[[main]]
+[[main_right]]
    name = "CV"
+   #pre = "<i class='ai ai-cv med-icon'></i>"
    url = "files/cv.pdf"
    weight = 7
