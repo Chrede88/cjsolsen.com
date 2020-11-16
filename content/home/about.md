@@ -19,7 +19,7 @@ author = "admin"
   #   Any HTML color name or Hex value is valid.
 
   # Background color.
-  color = "rgb(32,32,32)"
+  # color = "rgb(32,32,32)"
 
   # Background gradient.
   # gradient_start = "DeepSkyBlue"
