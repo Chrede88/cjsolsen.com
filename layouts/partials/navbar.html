@@ -129,8 +129,8 @@
         {{ end }}
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
-            {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
+          <a class="nav-link" href="{{ .URL | relLangURL }}"{{ if .Post }} data-toggle="tooltip" data-placement="bottom" title="{{ .Post }}"{{ end }}{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}{{ ($.Scratch.Get "target") | safeHTMLAttr }}>
+            {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>
           </a>
         </li>
 

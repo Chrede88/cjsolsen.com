@@ -8,18 +8,18 @@ light = false
 primary = "rgb(121,165,201)"
 
 # Menu
-menu_primary = "rgb(33,33,33)"
+menu_primary = "rgb(25,25,25)"
 dark_menu_primary = "rgba(63,81,181,0.9)"
 menu_text = "rgba(255,255,255,0.6)"
 menu_text_active = "rgb(121,165,201)"
 menu_title = "#fff"
 
 # Home sections
-home_section_odd = "rgb(32,32,32)"
-home_section_even = "rgb(33,33,33)"
+home_section_odd = "rgb(27,27,27)"
+home_section_even = "rgb(25,25,25)"
 
 # Background
-background = "rgb(32,32,32)"
+background = "rgb(25,25,25)"
 
 # link
 link = "rgb(100,120,220)"

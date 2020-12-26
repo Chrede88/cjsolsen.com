@@ -7,12 +7,10 @@ draft = false
 # List authors (if not me!)
 authors = []
 
-usertime = 1
-
 # Tags and categories
 # For example, use `tags = []` for no tags, or the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
 tags = ["Hiking"]
-categories = ["Test"]
+categories = []
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
