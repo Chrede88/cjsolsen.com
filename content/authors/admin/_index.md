@@ -48,14 +48,25 @@ social:
 - icon: envelope
   icon_pack: fas
   link: 'mailto:christian@cjsolsen.com'  # For a direct email link, use "mailto:test@example.org".
+  label: Send me an email
+  display:
+    footer: true
 
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.ca/citations?hl=en&user=aANZ2F8AAAAJ
+  label: Published articles
+  display:
+    header: true
+    footer: true
 
 - icon: github
   icon_pack: fab
   link: https://github.com/Chrede88
+  label: My Github profile
+  display:
+    header: true
+    footer: true
 
 - icon: instagram
   icon_pack: fab
@@ -64,15 +75,23 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/christian-olsen-a3114a1b8/
+  label: Connect on LinkedIn
+  display:
+    header: true
+    footer: true
 
 - icon: strava
   icon_pack: fab
   link: https://www.strava.com/athletes/5166204/
+  label: Follow me on Strava
 
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 - icon: cv
   icon_pack: ai
   link: files/cv.pdf
+  label: Download my CV
+  display:
+    header: true
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""

@@ -2,7 +2,7 @@
 # Slider widget.
 widget = "slider"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
-active = true  # Activate this widget? true/false
+active = false  # Activate this widget? true/false
 weight = 1  # Order that this section will appear.
 
 # Slide interval.
@@ -25,6 +25,7 @@ height = "calc(50vh)"
   # overlay_color = "#666"  # An HTML color value.
   overlay_img = "nanowire.png"  # Image path relative to your `static/media/` folder.
   overlay_filter = 0.2  # Darken the image. Value in range 0-1.
+  image_size = "100% 100%"
 
   [[item]]
     title = ""
@@ -36,6 +37,7 @@ height = "calc(50vh)"
     # overlay_color = "#666"  # An HTML color value.
     overlay_img = "mesa.png"  # Image path relative to your `static/media/` folder.
     overlay_filter = 0.2  # Darken the image. Value in range 0-1.
+    image_size = "100% 100%"
 
     [[item]]
       title = ""
@@ -47,4 +49,5 @@ height = "calc(50vh)"
       # overlay_color = "#666"  # An HTML color value.
       overlay_img = "squares.png"  # Image path relative to your `static/media/` folder.
       overlay_filter = 0.2  # Darken the image. Value in range 0-1.
+      image_size = "100% 100%"
 +++

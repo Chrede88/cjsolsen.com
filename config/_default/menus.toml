@@ -6,27 +6,32 @@
 [[main]]
   name = "Home"
   url = "#about"
-  weight = 1
+  weight = 10
 
 [[main]]
   name = "Publications"
   url = "#publications"
-  weight = 2
+  weight = 20
+
+[[main]]
+  name = "Talks"
+  url = "#projects"
+  weight = 30
 
 [[main]]
   name = "Blog"
   url = "#posts"
-  weight = 3
+  weight = 40
 
 [[main]]
   name = "Contact"
   url = "#contact"
-  weight = 6
+  weight = 60
 
-[[main_right]]
-  identifier = "CV"
-  name = "CV"
-#  pre = "<i class='ai ai-cv med-icon'></i>"
-  url = "files/cv.pdf"
-  weight = 1
-  post = "Download my CV"
+# [[main_right]]
+#   identifier = "CV"
+#   name = "CV"
+# #  pre = "<i class='ai ai-cv med-icon'></i>"
+#   url = "files/cv.pdf"
+#   weight = 1
+#   post = "Download my CV"

@@ -14,28 +14,17 @@ footer {
 
 .dark .navbar {
   background: $sta-menu-primary;
-  .navbar-nav {
-  .nav-link {
-    &.active {
-      font-weight: bold !important;
-      color: $sta-menu-text-active !important;
-      }
-    }
-  }
-}
-
-a:hover,
-a:focus {
- color: $sta-dark-link-hover;
-}
-
-.dark a:hover,
-.dark a:focus {
- color: $sta-link-hover;
 }
 
 .dark pre,
 .dark code {
   color: $sta-dark-link;
   background-color: rgb(68, 71, 75);
+}
+
+// centering organization image
+.portrait-title img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

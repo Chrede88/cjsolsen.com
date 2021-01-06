@@ -36,12 +36,12 @@
         {{ with $person.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
 
         {{ range $person.organizations }}
-        <p>
-          {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
-          <span>{{ .name }}</span>
-          {{ if $logo }}<img src="{{ $logo.RelPermalink }}";>{{ end }}
-          {{ if .url }}</a>{{ end }}
-        </p>
+          <p>
+            {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
+            <span>{{ .name }}</span>
+            {{ if $logo }}<img src="{{ $logo.RelPermalink }}";>{{ end }}
+            {{ if .url }}</a>{{ end }}
+          </p>
         {{ end }}
       </div>
 
