@@ -28,3 +28,10 @@ footer {
   margin-left: auto;
   margin-right: auto;
 }
+
+// Supppress the mobile workaround
+@include media-breakpoint-down(md) {
+  .parallax {
+    background-attachment: fixed;
+  }
+}
