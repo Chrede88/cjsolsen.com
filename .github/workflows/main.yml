@@ -27,7 +27,7 @@ jobs:
 
     # Builds cjsolsen.com repo
     - name: Build Hugo
-      run: hugo --minify --environment production
+      run: hugo --minify
       env:
         HUGO_PARAMS_MAP: '{"engine":1,"api_key":"${{ secrets.GMAPS }}","zoom":15}'
 
