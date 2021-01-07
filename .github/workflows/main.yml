@@ -29,7 +29,7 @@ jobs:
     - name: Build Hugo
       run: hugo --minify
       env:
-        HUGO_PARAMS_MAP: '{"engine":1,"api_key":"${{ secrets.GMAPS }}","zoom":15}'
+        HUGO#PARAMS#MAP#api_key: ${{ secrets.GMAPS }}
 
     # Deploys built website to S3
     - name: Deploy to S3
