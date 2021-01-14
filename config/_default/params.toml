@@ -210,6 +210,14 @@ plugins_js  = []
   talk_view = 2
 
 ############################
+## Footer
+############################
+
+# Add parallax iamge to footer
+[footer]
+  image = "background_cjsolsen.png"
+
+############################
 ## Comments
 ############################
 [comments]
