@@ -8,7 +8,7 @@ draft = false
 authors = []
 
 # Add code highlight
-# highlight = true
+highlight = true
 
 summary = "Use Hugo to easily build a nice website in a couple of hours and deploy it using AWS or Github."
 
