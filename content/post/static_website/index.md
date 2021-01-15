@@ -7,7 +7,8 @@ draft = false
 # List authors (if not me!)
 authors = []
 
-overridetime = 1
+# Add code highlight
+# highlight = true
 
 summary = "Use Hugo to easily build a nice website in a couple of hours and deploy it using AWS or Github."
 
