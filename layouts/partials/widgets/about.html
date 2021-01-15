@@ -39,7 +39,7 @@
           <p>
             {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}
             <span>{{ .name }}</span>
-            {{ if $logo }}<img src="{{ $logo.RelPermalink }}";>{{ end }}
+            {{ if $logo }}<img src="{{ $logo.RelPermalink }}" alt="">{{ end }}
             {{ if .url }}</a>{{ end }}
           </p>
         {{ end }}
