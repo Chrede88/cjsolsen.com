@@ -41,8 +41,8 @@
   {{ $footer := site.Params.footer }}
   {{ if and $footer.image .IsHome }}
     {{/* See Hugo note on linking assets in styles: https://github.com/gohugoio/hugoThemes#common-permalink-issues */}}
-    {{ $media_dir := $.Scratch.Get "media_dir" }}
-    {{ $style_bg = printf "background-image: url('%s');" (printf "%s/%s" $media_dir $footer.image | absURL) }}
+    {{ $background_img := resources.Get (path.Join "media" $footer.image) }}
+    {{ $style_bg = printf "background-image: url('%s');" ($background_img | absURL) }}
     {{ $footer_extra = true }}
   {{ end }}
 
